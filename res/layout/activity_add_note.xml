@@ -4,27 +4,43 @@
         android:layout_height="fill_parent" 
          android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Back" />
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Add" />
+
+        </LinearLayout>
 
         <EditText
             android:id="@+id/editText1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10" >
+            android:ems="10"
+            android:hint="Title" >
 
             <requestFocus />
         </EditText>
+
         <EditText
             android:id="@+id/editText2"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:ems="10"
+            android:gravity="center_vertical|top"
+            android:hint="Text"
             android:inputType="textMultiLine" />
-
-      
 
     </LinearLayout>

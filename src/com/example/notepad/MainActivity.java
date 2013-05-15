@@ -18,16 +18,13 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		ArrayList<String> notesItems = new ArrayList<String>();
-		ArrayAdapter<String> aa = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, notesItems);
+		ArrayAdapter<String> aa = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, AddNoteActivity.notesItems);
 		
 		//Get reference to the listview
-		ListView lv = (ListView)findViewById(R.id.listView1);
+		ListView lv = (ListView)findViewById(R.id.notesList);
 		lv.setAdapter(aa);
-		
-		
-		
-		Button addButton = (Button)findViewById(R.id.button1);
+
+		Button addButton = (Button)findViewById(R.id.newButton);
 		addButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
