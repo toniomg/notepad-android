@@ -40,6 +40,17 @@ public class AddNoteActivity extends Activity {
 				notesItems.add(title.getText().toString());
 			}
 		});
+		
+		
+		
+		//Database
+		MySQLiteHelper mySQLite = new MySQLiteHelper(this);
+		
+		Note note = new Note(1, "Example", "This is an example");
+		mySQLite.addNote(note);
+		
+		mySQLite.readNotes();
+		
 	}
 
 }
